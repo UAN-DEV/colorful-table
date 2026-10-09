@@ -1,3 +1,44 @@
-table{
-  border: 3px solid red;
+div:has(> div:first-child) {
+  width: max-content;
+  margin: 30px auto;
+  text-align: center;
+}
+div > div:first-child {
+  font-size: 25px;
+  color: #fa0600;
+}
+div > div:first-child::after {
+  content: "#05";
+  color: #8b33e2;
+}
+table {
+  outline: 5px solid #fa0600;
+}
+table th,
+td {
+  height: 25px;
+  border: 2px solid #181ff5;
+}
+
+thead * {
+  background-color: #fee5c5;
+}
+thead :nth-child(n + 2) {
+  width: 150px;
+}
+tbody > tr :first-child {
+  width: 50px;
+  background-color: #00ffff;
+}
+
+tbody > tr:nth-child(2n + 1) {
+  background-color: #beb76b;
+}
+
+tbody > tr:nth-child(2n) {
+  background-color: #d3d3d3;
+}
+
+tfoot * {
+  background-color: #ea967a;
 }
